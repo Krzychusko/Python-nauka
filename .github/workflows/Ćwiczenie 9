@@ -1,0 +1,22 @@
+import random
+x = ()
+while x != "quit":
+    w = random.randint(1,9)
+    user_num = int(input("Guess the number"))
+    a=[1]
+    while True:
+        if w>user_num:
+            print ("a little more")
+            user_num = int(input("Guess the number"))
+            a.append(user_num)
+        elif w<user_num:
+            print ("a little less")
+            user_num = int(input("Guess the number"))
+            a.append(user_num)
+        else:
+            print ("bravo, u've guessed the number after " + str(len(a))  + " times")
+            break
+
+    x = input("do you want to play another game? press enter to yes/'quit' to no")
+print ("----------------Thank you------------------")
+
